@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %} Twilio SMS Response {% endblock title %} 
+{% block base_css %}
+{{block.super}}
+{% endblock base_css %}
+{% block breadcrumbbar %}
+<div class="breadcrumbbar bg-transparent ">
+
+</div>
+{% endblock breadcrumbbar %}
+
+
+<!-- End Contentbar -->
+{% block content %}
+<div class="container-fluid mt-5">
+    <div class="card details-card bgc-none">
+        <h2 class="card-header header-bgc header-box-shadow">Twilio SMS Response</h2>
+
+        <div class="card-body py-0 ">
+
+            <div class="row justify-content-center">
+
+
+                <h2 class="card-header header-bgc header-box-shadow">{{sms_request}}</h2>
+
+
+                    {% comment %} <div class="col-12">
+                    {% for k,v in sms_prop %}
+                    <h6>{{k}} : {{v}}</h6>
+                    {% endfor %}
+                    </div>    {% endcomment %}
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

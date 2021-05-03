@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %} Send SMS Via Twilio {% endblock title %} 
+{% block base_css %}
+{{block.super}}
+{% endblock base_css %}
+{% block breadcrumbbar %}
+<div class="breadcrumbbar bg-transparent ">
+
+</div>
+{% endblock breadcrumbbar %}
+
+
+<!-- End Contentbar -->
+{% block content %}
+<div class="container-fluid mt-5">
+<form method="post" class="col"  action="{% url 'twilioapp:send-twilio-sms' %}">
+    <div class="card details-card bgc-none">
+        <h2 class="card-header header-bgc header-box-shadow">Send SMS Via Twilio</h2>
+
+        <div class="card-body py-0 ">
+            {% csrf_token %}
+
+            <div class="form-row justify-content-center">
+
+                {% include 'form_repeat.html' with f=form.send_to f_label="Send To" col_md=3 exclass="text-center" %}
+                {% include 'form_repeat.html' with f=form.sms_text f_label="Text" col_md=3 exclass="text-center" %}
+
+                <div class="form-group col-md-1 text-center">
+                    <label for=""
+                        class="col-form-label col-sm-12 text-nowrap font-weight-bold dark-theme-text">Send Sms</label>
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-outline-dark">Send Sms</button>
+                    </div>
+
+
+                </div>
+                <div class="form-group col-md-1 text-center">
+                    <label for=""
+                        class="col-form-label col-sm-12 text-nowrap font-weight-bold dark-theme-text">Reset</label>
+                    <div class="col-sm-12">
+                        <button type="reset" class="btn btn-outline-dark">Reset</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+</div>
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}

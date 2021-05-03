@@ -42,3 +42,23 @@
 ### Create superuser
 `python manage.py createsuperuser`
 
+
+
+####  https://github.com/TwilioDevEd/account-security-quickstart-django
+
+
+####  https://www.twilio.com/console/sms/settings/geo-permissions
+
+
+
+
+#### In trail version to must be in the verified number list
+##### https://www.twilio.com/console/phone-numbers/verified
+
+
+#### and also to send in another geo location it should be nebaled via
+##### https://www.twilio.com/console/sms/settings/geo-permissions
+
+
+#### also from should be from 
+##### https://www.twilio.com/console/phone-numbers/incoming
