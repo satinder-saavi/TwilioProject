@@ -1,0 +1,37 @@
+{% load static %} {% load humanize %}
+
+
+<!-- Start Topbar -->
+<div class="topbar w-100 dark-top-color-theme">
+  <!-- Start row -->
+  <div class="row align-items-center">
+    <!-- Start col -->
+    <div class="col-md-12 align-self-center">
+            <div class="menubar d-inline">
+              <a class="menu-hamburger" href="{% url 'twilioapp:home' %}">
+                Home
+              </a>
+            </div>
+
+      <div class="infobar">
+        <ul class="list-inline mb-0">
+          
+          <li class="list-inline-item">
+            <div class="settingbar">
+              <a
+                href="javascript:void(0)"
+                id="infobar-settings-open"
+                class="infobar-icon"
+                ><i class="ri-settings-line dark-icon-color"></i
+              ></a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- End col -->
+  </div>
+  <!-- End row -->
+</div>
+<!-- End Topbar -->

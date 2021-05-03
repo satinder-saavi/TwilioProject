@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t&_2%5z84cmlb$7^b#wx=5sufd_2n2%d0l!iu$m52q3db#r_af
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*",]
+ALLOWED_HOSTS = ["*", ]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     "django_twilio",
     "twilioapp",
